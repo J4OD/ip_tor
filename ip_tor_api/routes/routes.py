@@ -1,15 +1,9 @@
-from resources.controller import controller  
+import json
+from resources.ip_tor import Ip_Client
 
-def init_routes(app):
-    #default path
-    @app.route('/', methods=['GET'])
-    def get_controller_route():
-        c = controller()
-        return c.default()
+def initialize_routes(app):
 
-    #getInfo path
-    @app.route('/getips', methods=['GET'])
-    def get_IP_route():
-        ct = controller()
-        return ct.getIps()
-
+    @app.route('/ip_torproject',methods=['GET'])
+    def get_ip_routes():
+        ip = Ip_Client()
+        return ip.get_ips_torproject()
