@@ -6,4 +6,5 @@ class Users(db.Document):
     nombre = db.StringField(required=True)
     pwd = db.StringField(requied=True)
     created_at = db.DateTime(required=True)
+    logged_at = db.DateTime()
 

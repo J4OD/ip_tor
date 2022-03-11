@@ -2,6 +2,7 @@ import json
 
 import os
 import base64
+import hashlib
 
 class CryptoData:
     
@@ -25,4 +26,6 @@ class CryptoData:
         decrypt = decrypt.decode()
         return decrypt
         
-        
+    def hash(self, message):
+        encrypt = hashlib.sha256(message)
+        return encrypt
