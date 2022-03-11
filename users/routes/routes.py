@@ -14,6 +14,6 @@ def initialize_routes(app):
         return users_client.post_create()
 
     @app.route('/users',methods=['GET'])
-    def post_create_users():
+    def get_users():
         users_client = Users_Client()
         return users_client.get_users()
