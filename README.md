@@ -16,3 +16,6 @@ Trabajo de Desarrollo Seguro IPs TOR
     -   users
     -   get tor ips
     -   API
+
+## **Kubernetes microservicios**
+    Se siguieron los pasos y consejos de https://github.com/simplilearn-github/kubernetes/blob/master/simplilearn-kops-setup.MD
