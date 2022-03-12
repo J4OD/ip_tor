@@ -16,8 +16,16 @@ class Ip_Client:
 
     def get_ips_torproject(self):
         ips = Ips()
-        ips.get_ips_torproject()
+        info = ips.get_ips_torproject()
         _response = {
-            "msg": "DONE"
+            "msg": info
         }
-        Response(response=_response,status=200,mimetype='application/json;charset=UTF-8')
+        return Response(response=json.dumps(_response),status=200,mimetype='application/json;charset=UTF-8')
+
+    def get_ips_dan_me(self):
+        ips = Ips()
+        info = ips.get_ips_dan_me()
+        _response = {
+            "msg": 'DONE'
+        }
+        return Response(response=json.dumps(_response),status=200,mimetype='application/json;charset=UTF-8')

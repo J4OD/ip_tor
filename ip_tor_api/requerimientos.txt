@@ -1,3 +1,5 @@
+asyncio
+APScheduler
 flask-mongoengine
 flask-restful
 python-dateutil
